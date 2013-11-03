@@ -1,0 +1,24 @@
+﻿@model editor_example.Models.ListsOfThings
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("CakeOrDeath", "Home"))
+{
+    <input type="submit" />
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Cake or Death?</td>
+            </tr>
+        </thead>
+        <tbody>
+            @Html.EditorFor(m=> m.NewThings)
+            @Html.EditorFor(m=> m.OldThings)
+        </tbody>
+    </table>
+}

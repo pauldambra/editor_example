@@ -1,0 +1,16 @@
+﻿@model editor_example.Models.Thing
+
+    <tr>
+        <td>
+            @Html.HiddenFor(m=>m.Id)
+            @Html.DisplayFor(m => m.Id)
+        </td>
+        <td>
+            @Html.HiddenFor(m => m.Name)
+            @Html.DisplayFor(m => m.Name)
+        </td>
+        <td>
+            @Html.EditorFor(m => m.CakeOrDeath)
+        </td>
+    </tr>
+
